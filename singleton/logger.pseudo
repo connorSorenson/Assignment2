@@ -1,11 +1,19 @@
 public class Logger {
-	private String log;
+	//** private String log;**//
+	private static Logger log;   //** CHANGE: make instance object static so that only one can be created, make from class Logger **//
+
 	// Constructor
-	public Logger(){
+	//**  public Logger(){   **//
+	private Logger () {          //** CHANGE: make constructor private to force use of info() when creating an object **// 
 	}
 
 	// Log something
-	public info(String information){
+	//**   public info(String information){   **//
+
+	public static Logger info(String information) {    //** CHANGE: keep method public, but make it static, and use the logger constructor, note we could also add 'synchronized' before 'Logger' in order to make the singleton work with threads  **//
+		if (log == null) {				  //** CHANGE: create new log object if none have been instantiated yet **//
+			log = new Logger();
+		}
 		this.log.append(information);
 	}
 }
