@@ -1,6 +1,6 @@
 public class Logger {
 	//** private String log;**//
-	private static Logger log;   //** CHANGE: make instance object static so that only one can be created, make from class Logger **//
+	private static Logger log;   //** CHANGE: make instance object static (Java) so that only one can be created, make from class ,  **//
 
 	// Constructor
 	//**  public Logger(){   **//
