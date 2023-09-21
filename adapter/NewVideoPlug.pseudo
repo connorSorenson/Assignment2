@@ -1,0 +1,6 @@
+//** CHANGE: Create new interface for adaptee class **//
+
+interface NewVideoPlug {
+
+    public void digitalDisplay();
+}
