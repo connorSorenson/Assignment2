@@ -1,0 +1,12 @@
+//** CHANGE: Create adapter which will implement the old interface, then translate the method calls **//
+
+class AdapterVideoPlug implements VideoPlug {
+
+    NewVideoPlug NVP;
+    public AdapterVideoPlug(NewVideoPlug NVP) {
+        this.NVP = NVP;
+    }
+    public void display() {
+        NVP.digitalDisplay();
+    }
+}
