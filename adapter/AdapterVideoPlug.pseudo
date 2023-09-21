@@ -2,11 +2,11 @@
 
 class AdapterVideoPlug implements VideoPlug {
 
-    NewVideoPlug NVP;
-    public AdapterVideoPlug(NewVideoPlug NVP) {
-        this.NVP = NVP;
+    VideoPlug newVideoPlug;
+    public AdapterVideoPlug(VideoPlug newVideoPlug) {
+        this.newVideoPlug = newVideoPlug
     }
     public void display() {
-        NVP.digitalDisplay();
+        newVideoPlug.digitalDisplay();
     }
 }
