@@ -9,7 +9,7 @@ public class VideoSocket {
 		// plug MUST be of type VideoPlug
 		VideoPlug plug = new VGAPlug();
 
-		VideoPlug newVideoPlugAdapted = new AdapterVideoPlug(plug);  //** CHANGE: put plug object inside adapter object so it can use old interface **//
+		VideoPlug newVideoPlugAdapted = new AdapterVideoPlug(plug);  //** CHANGE: put plug object inside adapter object so it behaves like a VideoPlug**//
 
 		// call plug.display() 
 		//** plug.display(1024, 768);   **//
