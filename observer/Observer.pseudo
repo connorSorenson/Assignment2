@@ -2,5 +2,5 @@
 
 interface Observer {
 
-    public void turnon(String newColor);
+    public void turnOn(String newColor);
 }
