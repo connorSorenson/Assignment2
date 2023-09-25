@@ -1,4 +1,6 @@
-public class Driver {
+//** CHANGE: driver class must implement subject to comunicate with observer
+
+public class Driver implements Subject{
 	
 	public main(){
 
