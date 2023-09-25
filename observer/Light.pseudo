@@ -1,4 +1,6 @@
-public class Light{
+//** CHANGE: class needs to implement observer interface in order to recieve state updates **//
+
+public class Light implements Button {
 	private String color;
 
 	public Light(String color){
