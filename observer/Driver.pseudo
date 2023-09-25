@@ -1,10 +1,14 @@
-//** CHANGE: driver class must implement subject to comunicate with observer**//
 
-public class Driver implements Subject{
+public class Driver {
 	
 	public main(){
 
 	// create a button
+	//** CHANGE: create the neccesary objects so light can recieve state updates. **//
+	
+	Light light = new Light();
+	Button button = new Button();
+	button.registerObserver(light);
 
 	// create a red light
 
