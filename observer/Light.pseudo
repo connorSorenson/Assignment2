@@ -7,12 +7,14 @@ public class Light implements Observer {
 		this.color = color;
 	}
 
+	
 	// light turns on with specified color for 1 second	
-	//** CHANGE: pseudo functionality for the light to turn on briefly **//
-	public void turnOn(){
+	//** CHANGE: pseudo functionality for the light to turn on briefly and get updated by observer **//
+	public void turnOn(String newColor){
+		this.color = newColor;
 		int i = 1;
 		while (i==1) {
-		System.out.println("light is now on, .... 1 second has passed");
+		System.out.println("light is now " + newColor + " , .... 1 second has passed");
 		i = 0;
 		}
 		
