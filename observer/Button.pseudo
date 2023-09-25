@@ -1,7 +1,29 @@
-//** CHANGE: button can implement subject which will use observer to update light **//
+//** CHANGE: button can implement subject which will use observer to update light. Added two methods two manage observer objects. Update 
+	     method will update color and Press method will notify light of state changes**//
 
 public class Button implements Subject {
 
-	public void press(String color) {
+	public void registerObserver(Observer obs) {
+        	observerList.add(obs);
+    	}
+  
+  
+    	public void unregisterObserver(Observer obs) {
+        	observerList.remove(observerList.indexOf(obs));
+   	 }
+
+	public void update(String color) {
+		String newColor = color;
+		press(newColor);
+	}
+
+
+	public void press(String newColor) {
+		
+
+		for(Iterator<Observer> i = observerList.iterator(); i.hasNext();) {
+			Observer obs = it.next();
+			obs.turnOn(newColor);
 		}
+	}
 }
