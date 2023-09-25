@@ -1,0 +1,155 @@
+class user {
+
+  private String userName;
+  private String pw1;
+  private String pw2;
+  
+  public String getUsername() {
+    return userName;
+  }
+  public void String setUsername(String username) {
+  this.username = username;
+  }
+
+  public String getpw1() {
+    return pw1;
+  }
+
+  public void setpw1(String pw1) {
+    return this.pw1 = pw1;
+  }
+
+  public String getpw2() {
+    return pw2;
+  }
+  public void setpw2(String pw2) {
+   return this.pw2 = pw2;
+   }
+
+   public String gettitle() {
+     return title;
+    }
+
+    public void settitle(string title) {
+      return this.title = title;
+    }
+
+}
+
+class userView {
+
+  public void printUserView (String season) {
+      if season == summer {
+       $h1Style = '<h1 style="color: RED">';
+      }
+      else {
+        $h1Style = '<h1 style="color: BLUE">';
+      }
+      echo "<html>
+            <head>
+                $title
+            </head>
+            <body>
+                $h1Style
+                    Welcome $username
+                </h1>
+            </body>
+        </html>";
+  }
+
+}
+
+class userController {
+          private user model;
+        private userview view;
+      
+        public userController(user model, userView view) {
+          this.model = model;
+          this.view = view;
+        }
+        
+        public void setpw1(String pw1){
+          model.setpw1(pw1);
+         }
+        public String getpw1() {
+         return model.getPw1();
+         }
+         
+         public void setpw2(String pw2){
+          model.setpw1(pw2);
+         }
+        public String getpw2() {
+         return model.getPw2();
+         }
+      
+        public void setuserName(String userName){
+          model.setUserName(userName);
+         }
+        public String getUsername() {
+         return model.getUsername();
+           }
+        
+           public void setTitle(String title) {
+             model.settitle(title);
+           }
+        
+           public gettitle(){
+             return model.gettitle();
+           }
+        
+        public void initDB() {
+               // initialize database
+              $db = getDatabase('myHost', 'mypassword', 'myDb');
+              $table = "users";
+
+              // create user
+        
+              string username = getusername();
+              string password = getpw1;
+                $success = $db->query("INSERT INTO $table (username, password) 
+              VALUES ($username, $pwHash);");
+        
+                if(!$success)
+                return redirectBack(500);
+        
+        }
+        
+        public void validate(string username, string pw1, string pw2) {
+            // validate 
+              if ($pw1 != $pw2 || !valid($pw1) || !valid($username))
+              //return redirectBack(400);
+              updateview();
+              else {
+              return 0;
+              }
+              
+            }
+        
+           public void updateview() {
+            string season = api.getcurrentseason()
+             view.printUserView(season);
+            }
+            
+  }
+
+
+class Main {
+
+public static void main (string[] args) {
+  user model = makeuser();
+  userView view = new Userview();
+  userController usercontroller = new usercontroller(model, view);
+  usercontroller.updateview();
+
+  }
+}
+
+private static user makeuser() {
+user uSer = new user();
+uSer.setusername("me");
+uSer.setpw1("dasas");
+uSer.setpw2("assdggd");
+uSer.settitle("<title>Welcome $username</title>");
+}
+  
+  
