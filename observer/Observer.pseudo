@@ -1,6 +1,6 @@
-//** CHANGE: create observer class to communicate with light **//
+//** CHANGE: create observer class to communicate with light, method turnon will update in light.pseduo **//
 
 interface Observer {
 
-    public void update(String newColor);
+    public void turnon(String newColor);
 }
