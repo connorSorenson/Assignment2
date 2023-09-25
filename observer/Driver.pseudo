@@ -1,4 +1,4 @@
-//** CHANGE: driver class must implement subject to comunicate with observer
+//** CHANGE: driver class must implement subject to comunicate with observer**//
 
 public class Driver implements Subject{
 	
