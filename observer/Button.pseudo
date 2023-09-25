@@ -3,6 +3,7 @@
 
 public class Button implements Subject {
 	//** CHANGE: necessary variables, object, and constructor method **//
+	
 	String newColor = "";
 	ArrayList<Observer> observerList;
 	
@@ -19,12 +20,6 @@ public class Button implements Subject {
         	observerList.remove(observerList.indexOf(obs));
    	 }
 
-	public void update(String color) {
-		newColor = color;
-		press(newColor);
-	}
-
-
 	public void press(String newColor) {
 		
 
@@ -33,5 +28,10 @@ public class Button implements Subject {
 			obs.turnOn(newColor);
 		}
 	}
+
+	public void update(String color) {
+		newColor = color;
+		press(newColor);
+	}
+
 }
-Design Media Sharing Social Networking System
