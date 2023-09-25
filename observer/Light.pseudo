@@ -1,6 +1,6 @@
 //** CHANGE: class needs to implement observer interface in order to recieve state updates **//
 
-public class Light implements Button {
+public class Light implements Observer {
 	private String color;
 
 	public Light(String color){
@@ -8,6 +8,13 @@ public class Light implements Button {
 	}
 
 	// light turns on with specified color for 1 second	
+	//** CHANGE: pseudo functionality for the light to turn on briefly **//
 	public void turnOn(){
+		int i = 1;
+		while (i==1) {
+		System.out.println("light is now on, .... 1 second has passed");
+		i = 0;
+		}
+		
 	}
 }	
