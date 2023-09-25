@@ -3,7 +3,7 @@
 //** CHANGE: interface to be implemented by driver. will notify observer (button.pseudo) of object state changes**//
 
 interface Subject {
-  public void registerObserver(Observer Obs);
+  	public void registerObserver(Observer Obs);
 	public void unregisterObserver(Observer Obs);
 	public void notifyObservers();
 
