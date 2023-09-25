@@ -2,28 +2,28 @@
 public class Driver {
 	
 	public main(){
-
-	// create a button
-	//** CHANGE: create the neccesary objects so light can recieve state updates. **//
 	
-	Light light = new Light();
-
+	//** CHANGE: create the neccesary objects so light can recieve state updates. **//	
+	
+	// create a button
+	Button button = new Button();
+	
 
 	// create a red light
-	Button redButton = new Button();
-	redButton.registerObserver(light);
+	Light red = new Light();
+	button.registerObserver(red);
 	
 	// create a green light
-	Button greenButton = new Button();
-	greenButton.registerObserver(light);
+	Light green = new Light();
+	button.registerObserver(green);
 	
 	// create a blue light
-	Button blueButton = new Button();
-	blueButton.registerObserver(light);
+	Light blue = new Light();
+	button.registerObserver(blue);
 	
 	// have the blue light and the red light listen for the button
 	// press the button. Blue and red light should call turnOn in response
-	redButton.update("red");
+	button.update("red");
 	blueButton.update("blue");
 	// NOTE: your Button class should be generic - do not hard-code these 
 	// lights into the Button class.
