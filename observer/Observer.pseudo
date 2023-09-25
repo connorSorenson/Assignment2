@@ -1,0 +1,6 @@
+//** CHANGE: create observer class to communicate with light **//
+
+interface Observer {
+
+    public void update(String color);
+}
