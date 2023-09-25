@@ -1,6 +1,6 @@
 public class Button {
 
-	public void press(String light) {
+	public void press(String color) {
 		//** CHANGE: press method will update light color. Will update using string variable like in light.pseudo**//
 	}
 }
