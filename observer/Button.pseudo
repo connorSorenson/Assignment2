@@ -1,7 +1,14 @@
 //** CHANGE: button can implement subject which will use observer to update light. Added two methods two manage observer objects. Update 
-	     method will update color and Press method will notify light of state changes**//
+	     method will update color and Press method will notify light of state changes.**//
 
 public class Button implements Subject {
+	//** CHANGE: necessary variables, object, and constructor method **//
+	String newColor = "";
+	ArrayList<Observer> observerList;
+	
+	public Button() {
+		observerList = new ArrayList<Observer>();
+	}
 
 	public void registerObserver(Observer obs) {
         	observerList.add(obs);
@@ -13,7 +20,7 @@ public class Button implements Subject {
    	 }
 
 	public void update(String color) {
-		String newColor = color;
+		newColor = color;
 		press(newColor);
 	}
 
@@ -27,3 +34,4 @@ public class Button implements Subject {
 		}
 	}
 }
+Design Media Sharing Social Networking System
