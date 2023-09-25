@@ -2,5 +2,5 @@
 
 interface Observer {
 
-    public void update(String color);
+    public void update(String newColor);
 }
