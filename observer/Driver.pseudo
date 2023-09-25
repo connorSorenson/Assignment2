@@ -23,8 +23,8 @@ public class Driver {
 	
 	// have the blue light and the red light listen for the button
 	// press the button. Blue and red light should call turnOn in response
-	button.update("red");
-	blueButton.update("blue");
+	button.update(red, "red");
+	button.update(blue, "blue");
 	// NOTE: your Button class should be generic - do not hard-code these 
 	// lights into the Button class.
 
