@@ -26,9 +26,9 @@ public class Button implements Subject {
 		}
 	}
 
-	public void update(String color) {
+	public void update(Observer obs, String color) {
 		newColor = color;
-		press(newColor);
+		press(obs, newColor);
 	}
 
 }
