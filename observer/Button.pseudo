@@ -20,11 +20,8 @@ public class Button implements Subject {
         	observerList.remove(observerList.indexOf(obs));
    	 }
 
-	public void press(String newColor) {
-		
-
-		for(Iterator<Observer> i = observerList.iterator(); i.hasNext();) {
-			Observer obs = it.next();
+	public void press(Observer obs, String newColor) {
+			
 			obs.turnOn(newColor);
 		}
 	}
